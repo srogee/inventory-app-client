@@ -2,7 +2,9 @@
     "name": "inventory-app-client",
     "version": "1.0.0",
     "description": "",
-    "scripts": {},
+    "scripts": {
+        "watch": "node ContinuousIntegration.js"
+    },
     "author": "Joe Sorgea",
     "license": "ISC",
     "dependencies": {
