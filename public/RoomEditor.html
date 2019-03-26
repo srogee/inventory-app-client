@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Room Editor</title>
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="form-validation.css">
+</head>
+
+<body class="bg-light">
+    <div class="container">
+        <h4 class="mb-3">Room</h4>
+        <form class="needs-validation" id="mainForm" novalidate>
+            <div class="mb-3">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" name="name" placeholder="" value="" required>
+                <div class="invalid-feedback">
+                    Valid name is required.
+                </div>
+            </div>
+            <hr class="mb-4">
+            <div id="buttonsDiv"></div>
+        </form>
+    </div>
+
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="bootstrap.bundle.min.js"></script>
+    <script src="RoomEditor.js"></script>
+</body>
+
+</html>

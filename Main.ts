@@ -41,6 +41,11 @@ class TableDefinition {
     }
 
     public createTable(parentElement: HTMLElement) {
+        var button = $(`<button class="btn btn-primary btn-lg" type="button">New</button>`);
+        button.click(() => {
+            window.location.href = this._editUrl;
+        });
+        $(parentElement).append(button);
         let table = $(`<table class="table table-hover"><thead></thead><tbody></tbody></table>`);
         $(parentElement).append(table);
         this._element = table[0] as HTMLTableElement;
@@ -88,6 +93,8 @@ class TableDefinition {
     }
 }
 
+/////////////////////
+
 new TableDefinition('building', 'BuildingEditor.html', [
     new ColumnDefinition('Name', 'name'),
     new ColumnDefinition('Address Line 1', 'address'),
@@ -96,3 +103,7 @@ new TableDefinition('building', 'BuildingEditor.html', [
     new ColumnDefinition('State', 'state'),
     new ColumnDefinition('Postal Code', 'zip'),
 ]).createTable($('#buildingTabPane')[0]).loadData();
+
+new TableDefinition('room', 'RoomEditor.html', [
+    new ColumnDefinition('Name', 'name'),
+]).createTable($('#roomTabPane')[0]).loadData();
